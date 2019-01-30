@@ -1,0 +1,23 @@
+{
+    "name": "root/doctrine",
+    "description": "appli doctrine",
+    "require": {
+        "doctrine/orm": "^2.6",
+        "twig/twig": "^2.0"
+
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "model\\": "model/"
+        }
+    },
+    "authors": [
+        {
+            "name": "backalight",
+            "email": "antoine.soros@orange.fr"
+        }
+    ]
+}

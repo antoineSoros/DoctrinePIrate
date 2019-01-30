@@ -1,0 +1,9 @@
+<ul>
+    {%  for pirate in tab %}
+    <li>{{ pirate.nom }}
+    <ul>
+        <li>{{ pirate.prenom }}</li>
+        <li>{{ pirate.dob|date }}</li>
+    </ul></li>
+    {% endfor %}
+</ul>

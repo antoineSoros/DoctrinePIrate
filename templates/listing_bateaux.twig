@@ -1,0 +1,44 @@
+{% extends "base.twig" %}
+{% block content %}
+
+    <div class="container">
+
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <h1 >TURTLE BAY </h1>
+        </div>
+
+    <div class="row justify-content-md-center">
+        <h2>BATEAUX</h2></div>
+    <div class="row justify-content-between">
+
+    {% for bateau in bateaux %}
+    <div class="card col-sm " style="margin: 5px;">
+        <img src="../{{ bateau.image }}" class="card-img-top" alt="..." style="height: 50%; width: 50% ;margin-left: 25%" >
+        <div >
+            <div class="card-body">
+                <h5 class="card-title">BATEAU #{{ bateau.id }}</h5>
+                <p class="card-text">
+
+                    <h3>NOM: {{ bateau.nom }}</h3>
+                <h3>EQUIPAGE</h3>
+
+                <ul>
+                    {% for pirate in bateau.pirates %}
+                    <li>{{ pirate.blase }}</li>
+                   {% endfor %}
+                </ul>
+
+
+
+                </p>
+            </div>
+
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+    </div>
+
+
+{% endblock %}

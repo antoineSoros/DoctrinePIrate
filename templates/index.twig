@@ -1,0 +1,14 @@
+{% extends "base.twig" %}
+{% block content %}
+    {{ parent() }}
+
+    {% include "liste.twig" %}
+<div>
+    {% for key,value in tab %}
+    {{ key }} => {{ value.nom }}<br>
+    {% endfor %}
+
+
+</div>
+
+{% endblock %}

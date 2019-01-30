@@ -1,0 +1,35 @@
+{% extends "base.twig" %}
+{% block content %}
+
+        <div class="row justify-content-md-center">
+        <h2>PIRATES</h2></div>
+        <div class="row justify-content-between">
+
+{% for pirate in tab %}
+<div class="card col-sm" style="margin: 5px;">
+    <img src="../{{ pirate.picture }}" class="card-img-top" alt="..." >
+
+    <div >
+               <div class="card-body">
+            <h5 class="card-title">PIRATE #{{ pirate.id }}</h5>
+            <p class="card-text">
+                <ul>
+                       <li>NOM: {{ pirate.blase }}</li>
+
+                       <li> BUTIN:{{ pirate.butin }}</li>
+                   </ul>
+
+
+
+            </p>
+        </div>
+    </div>
+</div>
+
+
+{% endfor %}
+
+
+</div>
+    </div>
+{% endblock %}
